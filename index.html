@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Mia Andreeva | Junior Full Stack Developer, Digital Marketer &amp; Graphic Designer" name="description">
+        <title>Mia Andreeva | CV</title>
+        <style>
+            :root {
+                --wine: #593547;
+                --plum: #352731;
+                --muted: #6f6269;
+                --rose: #bd8a98;
+                --cream: #f7f1ee;
+                --paper: #fffdfa;
+                --ink: #2b282b;
+                --line: #e6d9d9;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                background: #eae5e3;
+                color: var(--ink);
+                font-family: "Lato","Arial",sans-serif;
+                font-size: 13px;
+                line-height: 1.49;
+            }
+
+            a {
+                color: var(--wine);
+                text-decoration: none;
+                transition: color .25s ease-in-out,opacity .25s ease-in-out;
+            }
+
+            a:hover {
+                color: #a25977;
+                text-decoration: underline;
+            }
+
+            .page {
+                max-width: 920px;
+                margin: 34px auto 50px;
+                background: var(--paper);
+                box-shadow: 0 15px 50px #43343b22;
+                overflow: hidden;
+            }
+
+            .topline {
+                height: 10px;
+                background: linear-gradient(90deg,var(--plum) 0%,var(--wine) 70%,var(--rose) 100%);
+            }
+
+            .hero {
+                padding: 35px 49px 28px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 34px;
+                animation: appear .8s ease-out both;
+            }
+
+            .kicker {
+                font-size: 10px;
+                font-weight: 900;
+                letter-spacing: 3.25px;
+                color: #a37585;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            h1 {
+                margin: 0;
+                font: normal 52px/1.06 Georgia,"Times New Roman",serif;
+                letter-spacing: -1.6px;
+                color: var(--plum);
+            }
+
+            h1 span {
+                color: var(--wine);
+            }
+
+            .role {
+                color: var(--wine);
+                letter-spacing: 1px;
+                font-size: 13px;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin: 14px 0 8px;
+            }
+
+            .hero-summary {
+                max-width: 610px;
+                color: var(--muted);
+                font-size: 13px;
+                line-height: 1.53;
+                margin: 0;
+            }
+
+            .photo {
+                flex: 0 0 134px;
+                width: 134px;
+                height: 134px;
+                border-radius: 50%;
+                border: 2px solid #d1aeb8;
+                padding: 6px;
+                position: relative;
+                background: #fff;
+            }
+
+            .photo-inner {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #eee2e2;
+                color: #805668;
+                letter-spacing: 0.1em;
+                font: normal 39px Georgia,serif;
+                overflow: hidden;
+            }
+
+            .photo img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                display: none;
+            }
+
+            .photo img[src]:not([src=""]) {
+                display: block;
+            }
+
+            .photo:has(img[style*="display: none"]) .photo-inner {
+                display: flex;
+            }
+
+            .cv-body {
+                display: grid;
+                grid-template-columns: 31% minmax(0,69%);
+                border-top: 1px solid var(--line);
+            }
+
+            .sidebar {
+                background: var(--cream);
+                padding: 29px 25px 33px 42px;
+                min-width: 0;
+            }
+
+            .content {
+                padding: 30px 48px 37px 39px;
+                min-width: 0;
+            }
+
+            section {
+                margin-bottom: 26px;
+            }
+
+            section:last-child {
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 11px;
+                font-weight: 900;
+                color: var(--wine);
+                letter-spacing: 2px;
+                margin: 0 0 14px;
+                line-height: 1.3;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            h2:after {
+                content: "";
+                display: block;
+                height: 1px;
+                background: #ddcbd0;
+                flex: 1;
+            }
+
+            .contact-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact {
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+                overflow-wrap: anywhere;
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            .contact svg {
+                flex: 0 0 15px;
+                width: 15px;
+                height: 15px;
+                color: #a57483;
+                margin-top: 1px;
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 1.9;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+            .contact a {
+                overflow-wrap: anywhere;
+            }
+
+            .social-item {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 6px;
+                line-height: 1.6;
+                margin-bottom: 9px;
+                font-size: 12px;
+            }
+
+            .social-item strong {
+                font-weight: 900;
+                color: var(--plum);
+                white-space: nowrap;
+            }
+
+            .social-item a {
+                overflow-wrap: anywhere;
+            }
+
+            .skill-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 7px;
+            }
+
+            .skill {
+                background: #fffaf8;
+                border: 1px solid #e7d7d9;
+                border-radius: 4px;
+                padding: 4px 7px;
+                font-size: 11.7px;
+                color: #5b4851;
+            }
+
+            .mini-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .mini-list li {
+                margin: 0 0 8px;
+                line-height: 1.35;
+                font-size: 12px;
+            }
+
+            .mini-list li b {
+                color: var(--plum);
+            }
+
+            .copy {
+                font-size: 12.8px;
+                color: #5e5359;
+                margin: 0;
+                line-height: 1.56;
+            }
+
+            .job {
+                padding-left: 16px;
+                border-left: 2px solid #d8b5bf;
+                position: relative;
+            }
+
+            .job:before {
+                content: "";
+                position: absolute;
+                left: -5.5px;
+                top: 5px;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: var(--wine);
+            }
+
+            .entry-heading {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            h3 {
+                margin: 0;
+                color: var(--plum);
+                font-weight: 900;
+                font-size: 14px;
+                line-height: 1.32;
+            }
+
+            .period {
+                font-size: 11.3px;
+                font-weight: 800;
+                color: #a07180;
+                white-space: nowrap;
+            }
+
+            .job-sub {
+                font-size: 12px;
+                font-weight: 700;
+                color: #8b6372;
+                margin: 3px 0 7px;
+            }
+
+            ul.points {
+                margin: 0;
+                padding-left: 16px;
+                color: #5e5359;
+                font-size: 12.1px;
+                line-height: 1.47;
+            }
+
+            ul.points li {
+                padding-left: 1px;
+                margin-bottom: 4px;
+            }
+
+            .projects {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .project-space {
+                container-type: inline-size;
+            }
+
+            .project-space:first-child {
+                grid-column: 1 / -1;
+            }
+
+            .project {
+                height: 100%;
+                display: flex;
+                gap: 11px;
+                align-items: flex-start;
+                background: #fff;
+                border: 1px solid #eadcde;
+                border-radius: 7px;
+                padding: 12px;
+                transition: transform .25s ease-in-out,border-color .25s ease-in-out,box-shadow .25s ease-in-out;
+            }
+
+            .project:hover {
+                transform: translateY(-3px);
+                border-color: #bd8a98;
+                box-shadow: 0 9px 24px #4b293217;
+            }
+
+            .project-mark {
+                flex: 0 0 27px;
+                width: 27px;
+                height: 27px;
+                border-radius: 6px;
+                background: #eee3e6;
+                color: #9a6a7c;
+                display: grid;
+                place-items: center;
+                font-size: 13px;
+                font-weight: 900;
+            }
+
+            .project h3 {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+            .project p {
+                margin: 0 0 6px;
+                font-size: 11.5px;
+                line-height: 1.36;
+                color: #756870;
+            }
+
+            .project a {
+                font-size: 11px;
+                font-weight: 900;
+            }
+
+            .study {
+                display: grid;
+                grid-template-columns: 92px minmax(0,1fr);
+                gap: 5px 14px;
+                margin-bottom: 12px;
+            }
+
+            .study .year {
+                font-size: 10.8px;
+                color: #9c7180;
+                font-weight: 900;
+                padding-top: 2px;
+            }
+
+            .study h3 {
+                font-size: 12.6px;
+            }
+
+            .study p {
+                font-size: 11.8px;
+                color: #766970;
+                margin: 3px 0 0;
+                line-height: 1.32;
+            }
+
+            .github-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 9px;
+            }
+
+            .github-card {
+                padding: 10px 10px;
+                background: #faf5f4;
+                border: 1px solid #e9dede;
+                border-radius: 6px;
+                transition: background .2s ease-in-out;
+            }
+
+            .github-card:hover {
+                background: #f4e8e8;
+            }
+
+            .github-card strong {
+                display: block;
+                font-size: 11.6px;
+                line-height: 1.35;
+                color: #523b45;
+                margin-bottom: 5px;
+            }
+
+            .github-card a {
+                font-size: 10.9px;
+                font-weight: 900;
+            }
+
+            .bottom {
+                padding: 12px 48px;
+                border-top: 1px solid #ebdfdf;
+                color: #a78d96;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .print-btn {
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                background: var(--wine);
+                color: white;
+                border: 0;
+                border-radius: 100px;
+                padding: 12px 19px;
+                box-shadow: 0 10px 25px #0002;
+                font-size: 12px;
+                letter-spacing: .4px;
+                font-weight: 800;
+                cursor: pointer;
+                transition: background .25s ease-in-out,transform .25s ease-in-out;
+                z-index: 10;
+            }
+
+            .print-btn:hover {
+                background: #7b4b61;
+                transform: translateY(-2px);
+            }
+
+            @keyframes appear {
+                from {
+                    opacity: 0;
+                    transform: translateY(12px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+
+            @container (min-width: 421px) {
+                .project {
+                    flex-direction: row;
+                }
+
+            }
+
+            @container (max-width: 420px) {
+                .project {
+                    flex-direction: column;
+                }
+
+            }
+
+            @media (max-width:700px) {
+                .page {
+                    margin: 0;
+                    max-width: none;
+                    box-shadow: none;
+                }
+
+                .hero {
+                    padding: 30px 25px;
+                    gap: 19px;
+                }
+
+                h1 {
+                    font-size: 39px;
+                }
+
+                .photo {
+                    flex-basis: 101px;
+                    width: 101px;
+                    height: 101px;
+                }
+
+                .photo-inner {
+                    font-size: 32px;
+                }
+
+                .role {
+                    font-size: 11px;
+                }
+
+                .cv-body {
+                    grid-template-columns: 1fr;
+                }
+
+                .sidebar {
+                    padding: 25px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px 18px;
+                }
+
+                .sidebar section {
+                    margin: 0 0 14px;
+                }
+
+                .content {
+                    padding: 28px 25px 35px;
+                }
+
+                .bottom {
+                    padding: 12px 25px;
+                }
+
+            }
+
+            @media (max-width:420px) {
+                .hero {
+                    align-items: flex-start;
+                    gap: 12px;
+                    flex-wrap: wrap;
+                }
+
+                h1 {
+                    font-size: 39px;
+                }
+
+                .hero-summary {
+                    font-size: 12px;
+                }
+
+                .photo {
+                    width: 90px;
+                    height: 90px;
+                    flex-basis: 90px;
+                    margin: 2px 0 0 auto;
+                    order: -1;
+                }
+
+                .photo-inner {
+                    font-size: 26px;
+                }
+
+                .sidebar {
+                    grid-template-columns: 1fr;
+                }
+
+                .projects,.github-list {
+                    grid-template-columns: 1fr;
+                }
+
+                .study {
+                    grid-template-columns: 73px 1fr;
+                    gap: 9px;
+                }
+
+                .print-btn {
+                    position: static;
+                    margin: 12px 18px 22px;
+                    box-shadow: none;
+                }
+
+            }
+
+            @media (prefers-reduced-motion:reduce) {
+                *,*::before,*::after {
+                    animation: none !important;
+                    transition: none !important;
+                    scroll-behavior: auto !important;
+                }
+
+            }
+
+            .role {
+                font-size: 12px;
+                letter-spacing: .45px;
+                line-height: 1.6;
+            }
+
+            .contact-list {
+                flex-wrap: wrap;
+            }
+
+            .contact {
+                flex: 1 1 100%;
+            }
+
+            .skill-line {
+                margin: 0 0 6px;
+                font-size: 11.5px;
+                line-height: 1.47;
+                color: #574b52;
+                overflow-wrap: anywhere;
+            }
+
+            .skill-line b {
+                font-weight: 800;
+                color: var(--plum);
+            }
+
+            .language-list {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 12px;
+                row-gap: 6px;
+            }
+
+            .language-list span {
+                font-size: 11.5px;
+                line-height: 1.4;
+            }
+
+            .language-list b {
+                color: var(--plum);
+            }
+
+            .sidebar section {
+                margin-bottom: 19px;
+            }
+
+            @media print {
+                .role {
+                    font-size: 8pt;
+                    line-height: 1.3;
+                    letter-spacing: 0.2pt;
+                }
+
+                .sidebar section {
+                    margin-bottom: 3.5mm;
+                }
+
+                .skill-line {
+                    font-size: 7.4pt;
+                    line-height: 1.3;
+                    margin-bottom: 1.2mm;
+                }
+
+                .language-list {
+                    gap: 1mm 3mm;
+                }
+
+                .language-list span {
+                    font-size: 7.8pt;
+                }
+
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            @media print {
+                html,body {
+                    background: #fff;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+
+                .page {
+                    width: 210mm;
+                    max-width: none;
+                    margin: 0;
+                    min-height: 297mm;
+                    box-shadow: none;
+                }
+
+                .print-btn {
+                    display: none !important;
+                }
+
+                .topline {
+                    height: 3mm;
+                }
+
+                .hero {
+                    padding: 9.8mm 11mm 7.8mm;
+                    gap: 6mm;
+                    animation: none !important;
+                    opacity: 1 !important;
+                    transform: none !important;
+                }
+
+                .kicker {
+                    font-size: 7.2pt;
+                    margin-bottom: 2mm;
+                    letter-spacing: 2.1pt;
+                }
+
+                h1 {
+                    font-size: 37pt;
+                }
+
+                .role {
+                    font-size: 9pt;
+                    margin: 3mm 0 2mm;
+                }
+
+                .hero-summary {
+                    font-size: 8.7pt;
+                    line-height: 1.4;
+                    max-width: 135mm;
+                }
+
+                .photo {
+                    flex-basis: 28mm;
+                    width: 28mm;
+                    height: 28mm;
+                    padding: 1.2mm;
+                }
+
+                .photo-inner {
+                    font-size: 26pt;
+                }
+
+                .cv-body {
+                    grid-template-columns: 31% 69%;
+                }
+
+                .sidebar {
+                    display: block;
+                    padding: 7mm 5mm 6mm 11mm;
+                }
+
+                .content {
+                    padding: 7mm 10mm 6mm 8mm;
+                }
+
+                section {
+                    margin-bottom: 5mm;
+                }
+
+                h2 {
+                    font-size: 7.7pt;
+                    letter-spacing: 1.2pt;
+                    margin-bottom: 2.6mm;
+                }
+
+                .contact-list {
+                    gap: 2.3mm;
+                }
+
+                .contact {
+                    font-size: 8.1pt;
+                    gap: 2mm;
+                }
+
+                .contact svg {
+                    flex-basis: 3.4mm;
+                    width: 3.4mm;
+                    height: 3.4mm;
+                }
+
+                .social-item {
+                    font-size: 7.9pt;
+                    margin-bottom: 2mm;
+                }
+
+                .skill {
+                    font-size: 7.4pt;
+                    padding: 1mm 1.5mm;
+                }
+
+                .skill-list {
+                    gap: 1.5mm;
+                }
+
+                .mini-list li {
+                    font-size: 8pt;
+                    margin-bottom: 1.4mm;
+                }
+
+                .copy {
+                    font-size: 8.5pt;
+                    line-height: 1.44;
+                }
+
+                h3 {
+                    font-size: 10pt;
+                }
+
+                .period {
+                    font-size: 7.6pt;
+                }
+
+                .job-sub {
+                    font-size: 8.4pt;
+                    margin: 1mm 0 2mm;
+                }
+
+                ul.points {
+                    font-size: 8.3pt;
+                    line-height: 1.42;
+                }
+
+                ul.points li {
+                    margin-bottom: 1mm;
+                }
+
+                .projects {
+                    gap: 2mm;
+                }
+
+                .project {
+                    padding: 2.5mm;
+                    gap: 2mm;
+                }
+
+                .project-mark {
+                    flex-basis: 6mm;
+                    width: 6mm;
+                    height: 6mm;
+                    font-size: 8pt;
+                }
+
+                .project h3 {
+                    font-size: 8.3pt;
+                    margin-bottom: 1.1mm;
+                }
+
+                .project p {
+                    font-size: 7.6pt;
+                    line-height: 1.33;
+                    margin-bottom: 1.2mm;
+                }
+
+                .project a {
+                    font-size: 7.4pt;
+                }
+
+                .study {
+                    grid-template-columns: 22mm 1fr;
+                    gap: 1mm 2.5mm;
+                    margin-bottom: 2mm;
+                }
+
+                .study .year {
+                    font-size: 7.5pt;
+                }
+
+                .study h3 {
+                    font-size: 8.8pt;
+                }
+
+                .study p {
+                    font-size: 8pt;
+                    line-height: 1.3;
+                    margin-top: .8mm;
+                }
+
+                .github-list {
+                    gap: 2mm;
+                }
+
+                .github-card {
+                    padding: 2mm 2.4mm;
+                }
+
+                .github-card strong {
+                    font-size: 7.7pt;
+                    margin-bottom: 1mm;
+                }
+
+                .github-card a {
+                    font-size: 7.4pt;
+                }
+
+                .bottom {
+                    padding: 2.4mm 10mm;
+                    font-size: 7pt;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                section,.project,.study,.job {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
+                }
+
+            }
+
+            @media print {
+                .page {
+                    zoom: .85 !important;
+                    width: 210mm !important;
+                    min-height: 0 !important;
+                    margin: 0 0 0 12mm !important;
+                }
+
+            }
+            @media print {
+                .project-space:first-child {
+                    grid-column: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page">
+            <div class="topline"></div>
+            <header class="hero">
+                <div>
+                    <span class="kicker">PORTFOLIO</span>
+                    <h1>Mia <span>Andreeva</span></h1>
+                    <div class="role">Junior Full Stack Developer · Digital Marketer · Graphic Designer</div>
+                    <p class="hero-summary">I bring together development, creative design and digital marketing to build thoughtful websites, strong brands and engaging content.</p>
+                </div>
+                <div aria-label="Profile picture placeholder" class="photo">
+                    <div class="photo-inner">
+                        <span id="initials">MA</span>
+                        <img alt="Portrait of Mia Andreeva" id="profile-picture" onerror="this.style.display='none'" onload="this.style.display='block'; document.getElementById('initials').style.display='none'" src="founder.png">
+                    </div>
+                </div>
+            </header>
+            <div class="cv-body">
+                <aside class="sidebar">
+                    <section aria-labelledby="contact-title">
+                        <h2 id="contact-title">Contact</h2>
+                       
+                        <div class="contact-list">
+                            
+                            <div class="contact">
+                                <svg aria-hidden="true" viewbox="0 0 24 24">
+                                    <path d="M4 4h4l2.5 5-2.1 2.1a16 16 0 0 0 4.6 4.6l2.1-2.1L20 16v4a2 2 0 0 1-2.2 2A19 19 0 0 1 2 6.2 2 2 0 0 1 4 4Z"></path>
+                                </svg>
+                                <a href="tel:+38971302817">+389 71 302 817</a>
+                            </div>
+                           
+                            <div class="contact">
+                                <svg aria-hidden="true" viewbox="0 0 24 24">
+                                    <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                                    <path d="m2 6 10 8 10-8"></path>
+                                </svg>
+                                <a href="mailto:andreevamia14@gmail.com">andreevamia14@gmail.com</a>
+                            </div>
+                           
+                            <div class="contact">
+                                <svg aria-hidden="true" viewbox="0 0 24 24">
+                                    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+                                <span>Kočani, North Macedonia</span>
+                            </div>
+                           
+                            <div class="contact">
+                                <svg aria-hidden="true" viewbox="0 0 24 24">
+                                    <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path>
+                                </svg>
+                                <a href="https://miora.mk" rel="noopener" target="_blank">www.miora.mk</a>
+                            </div>
+                        </div>
+                    </section>
+                   
+                    <section aria-labelledby="online-title">
+                        <h2 id="online-title">Online portfolio</h2>
+                        <div class="social-item"><strong>Instagram</strong><a href="https://www.instagram.com/miora_business?igsh=MXh4ZGN4bjl5cHY2Yw%253D%253D&utm_source=qr" rel="noopener" target="_blank">@miora_business ↗</a></div>
+                        <div class="social-item"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/mia-andreeva-235b34315/" rel="noopener" target="_blank">Mia Andreeva ↗</a></div>
+                        <div class="social-item"><strong>GitHub</strong><a href="https://github.com/andreevamia14-am" rel="noopener" target="_blank">andreevamia14-am ↗</a></div>
+                    </section>
+                   
+                    <section aria-labelledby="skills-title">
+                        <h2 id="skills-title">Core skills</h2>
+                        <div class="skill-list">
+                            <span class="skill">Full-Stack Development</span>
+                            <span class="skill">Social Media Marketing</span>
+                            <span class="skill">Digital Marketing</span>
+                            <span class="skill">Content Creation</span>
+                            <span class="skill">Graphic Design</span>
+                            <span class="skill">Branding</span>
+                            <span class="skill">Web Design</span>
+                            <span class="skill">Video Editing</span>
+                            <span class="skill">UI/UX</span>
+                        </div>
+                    </section>
+                   
+                    <section aria-labelledby="development-title">
+                        <h2 id="development-title">Development</h2>
+                        <p class="skill-line"><b>Front end:</b> HTML5, CSS3, JavaScript, React, responsive design</p>
+                        <p class="skill-line"><b>Back end:</b> Node.js, Express.js, MongoDB, REST APIs</p>
+                        <p class="skill-line"><b>Tools:</b> Git, GitHub, GNU/Linux, npm, VS Code, Render, C++</p>
+                        <p class="skill-line"><b>Web:</b> WordPress, Wix, Google Sites</p>
+                    </section>
+                  
+                    <section aria-labelledby="creative-title">
+                        <h2 id="creative-title">Design &amp; creative tools</h2>
+                        <p class="skill-line">Figma, Canva, Affinity, Adobe Photoshop, Illustrator, InDesign, Premiere Pro, CorelDRAW</p>
+                        <p class="skill-line">Logo design, brand identity, layouts, print design, presentations, Microsoft Office (Word, Excel, PowerPoint)</p>
+                    </section>
+                  
+                    <section aria-labelledby="marketing-title">
+                        <h2 id="marketing-title">Marketing &amp; content</h2>
+                        <p class="skill-line">Social media management, content calendars, copywriting, SEO / SEM, email marketing, Meta Ads, Google Ads, analytics, buyer personas, lead generation, campaign planning, reels &amp; video editing</p>
+                    </section>
+                  
+                    <section aria-labelledby="ai-title">
+                        <h2 id="ai-title">AI toolkit</h2>
+                        <p class="skill-line">ChatGPT, Claude, Gemini, Microsoft Copilot, GitHub Copilot, Perplexity, Cursor, Adobe Firefly, Midjourney, Runway</p>
+                        <p class="skill-line">AI-assisted research, prompting, visual &amp; content workflows</p>
+                    </section>
+                  
+                    <section aria-labelledby="languages-title">
+                        <h2 id="languages-title">Languages</h2>
+                        <div class="language-list"><span><b>Macedonian</b> · Native</span><span><b>English</b> · Fluent</span><span><b>German</b> · Basic</span></div>
+                    </section>
+                  
+                    <section aria-labelledby="interests-title">
+                        <h2 id="interests-title">Interests</h2>
+                        <p class="copy">Creative projects · Sports · Strategic games · Continuous learning</p>
+                    </section>
+                </aside>
+              
+                <main class="content">
+                   
+                    <section aria-labelledby="about-title">
+                        <h2 id="about-title">Profile</h2>
+                        <p class="copy">
+                            Junior Full Stack Developer, Digital Marketer and Graphic Designer 
+                            combining a technical background with creative thinking. I develop 
+                            responsive websites, create visual identities and social media content,
+                             and support brands with digital campaigns. Currently expanding 
+                             my full-stack knowledge through the Semos JavaScript Academy.
+                        </p>
+                    </section>
+                   
+                    <section aria-labelledby="experience-title">
+                        <h2 id="experience-title">Experience</h2>
+                        <div class="job">
+                            <div class="entry-heading">
+                                <h3>MIORA</h3>
+                                <span class="period">2026 — Present</span>
+                            </div>
+                            <div class="job-sub">Founder &amp; Creative Director · Design, Content &amp; Web</div>
+                            <ul class="points">
+                                <li>Create visual content, carousels, campaigns and social media posts for social media.</li>
+                                <li>Design websites, logos, branded materials, digital menus and client presentations.</li>
+                                <li>Plan content calendars, support digital strategy and coordinate client projects.</li>
+                            </ul>
+                        </div>
+                    </section>
+                   
+                    <section aria-labelledby="portfolio-title">
+                        <h2 id="portfolio-title">Website portfolio</h2>
+                       
+                        <div class="projects">
+                           
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">01</span>
+                                    <div>
+                                        <h3>MIORA</h3>
+                                        <p>Website, branding and social media content.</p>
+                                        <a href="https://miora.mk" rel="noopener" target="_blank">Website ↗</a>
+                                        ·
+                                        <a href="https://www.instagram.com/miora.agency/" rel="noopener" target="_blank">Instagram ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                          
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">02</span>
+                                    <div>
+                                        <h3>Mobilnost Kočani</h3>
+                                        <p>Web project and online presentation.</p>
+                                        <a href="https://mobilnostkocani.mk/" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                           
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">03</span>
+                                    <div>
+                                        <h3>Public Coffee Bar</h3>
+                                        <p>Responsive business landing page.</p>
+                                        <a href="https://publiccooffeebar.netlify.app/" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">04</span>
+                                    <div>
+                                        <h3>Tvoj Defektolog</h3>
+                                        <p>Special Educator</p>
+                                        <a href="https://sites.google.com/view/tvojdefektolog/home?authuser=0" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                           
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">05</span>
+                                    <div>
+                                        <h3>Flavique</h3>
+                                        <p>Creative website concept and design.</p>
+                                        <a href="https://flavique.netlify.app/" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">06</span>
+                                    <div>
+                                        <h3>Kopro</h3>
+                                        <p>Online Web Store</p>
+                                        <a href="https://kopro-elbo.onrender.com/" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">07</span>
+                                    <div>
+                                        <h3>Neuro Quiz Challenge</h3>
+                                        <p>Game</p>
+                                        <a href="https://neuro-quiz-challenge.netlify.app/" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="project-space">
+                                <article class="project">
+                                    <span class="project-mark">08</span>
+                                    <div>
+                                        <h3>Digital Marketing</h3>
+                                        <p>Homework example</p>
+                                        <a href="https://remarkable-sprinkles-c52150.netlify.app/" rel="noopener" target="_blank">Visit project ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                  
+                    <section aria-labelledby="education-title">
+                        <h2 id="education-title">Education &amp; training</h2>
+                        
+                        <div class="study">
+                            <span class="year">2026 — Now</span>
+                            <div>
+                                <h3>Semos Education</h3>
+                                <p>JavaScript Full-Stack Developer Academy · In progress</p>
+                            </div>
+                        </div>
+                       
+                        <div class="study">
+                            <span class="year">2025</span>
+                            <div>
+                                <h3>Brainster NU College AI</h3>
+                                <p>Web Programming × AI</p>
+                            </div>
+                        </div>
+                      
+                        <div class="study">
+                            <span class="year">2024 / 2025</span>
+                            <div>
+                                <h3>IQ Online Academy</h3>
+                                <p>Digital Marketing · CPD certificate awarded in 2025</p>
+                            </div>
+                        </div>
+                       
+                        <div class="study">
+                            <span class="year">2022 — 2026</span>
+                            <div>
+                                <h3>SOU “Gošo Vikentiev”, Kočani</h3>
+                                <p>Electrical Technician — Computer Technology &amp; Automation</p>
+                            </div>
+                        </div>
+                    </section>
+                   
+                    <section aria-labelledby="code-title">
+                        <h2 id="code-title">Projects — GitHub repositories</h2>
+                       
+                        <div class="github-list">
+                            <div class="github-card"><strong>Git Branching Practice</strong><a href="https://github.com/andreevamia14-am/vezba-git" rel="noopener" target="_blank">GitHub repository ↗</a></div>
+                            <div class="github-card"><strong>Git Fundamentals</strong><a href="https://github.com/andreevamia14-am/test-git26" rel="noopener" target="_blank">GitHub repository ↗</a></div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+           
+            <footer class="bottom"><span>MIA ANDREEVA · KOČANI, NORTH MACEDONIA</span><span>Code • Strategy • Design</span></footer>
+        </div>
+    </body>
+</html>
